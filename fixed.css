@@ -1,0 +1,76 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Body */
+body {
+  background-color: black;
+  color: white;
+}
+
+/* Navbar */
+nav {
+  width: 100%;
+  background: #333;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 15px 0;
+  display: block;
+}
+
+nav ul li a.active {
+  border-bottom: 2px solid yellow;
+}
+
+/* Sections */
+section {
+  height: 100vh;
+  padding: 50px;
+}
+
+#home { background: #1a1a1a; display: flex; justify-content: center; align-items: center; font-size: 24px; }
+#about { background: #222; }
+#contact { background: #333; }
+
+/* Typing effect */
+.typing-container {
+  font-size: 24px;
+  font-family: monospace;
+}
+.cursor {
+  display: inline-block;
+  background-color: white;
+  width: 2px;
+  animation: blink 0.7s infinite;
+  margin-left: 2px;
+}
+@keyframes blink {
+  0%,50%,100% { opacity: 1; }
+  25%,75% { opacity: 0; }
+}
+
+/* Counter */
+.counter {
+  font-size: 40px;
+  margin-top: 20px;
+}
