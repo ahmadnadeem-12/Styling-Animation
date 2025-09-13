@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+  <link rel="stylesheet" href="navbar.css">
+</head>
+<body>
+
+  <div class="container">
+    <nav>
+      <ul>
+        <li><a style="text-decoration: none; color: black;" href="index.html">Home</a></li>
+        <li>About</li>
+        <li>Contact Us</li>
+        <li>Gallery</li>
+      </ul>
+      <button id="menu-btn">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </nav>
+  </div>
+
+  <script>
+    const btn = document.getElementById("menu-btn");
+    const menu = document.querySelector("nav ul");
+    const icon = btn.querySelector("i");
+
+    btn.addEventListener("click", () => {
+      menu.classList.toggle("chalja");
+      if (menu.classList.contains("chalja")) {
+    btn.innerText = "X"; // replace with text
+  } else {
+    btn.innerHTML = '<i class="fa-solid fa-bars"></i>'; // back to bars icon
+  }
+    });
+  </script>
+
+</body>
+</html>

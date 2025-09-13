@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #eee;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  list-style: none;
+}
+
+button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  display: none; /* default hidden */
+}
+
+/* Small screen styles */
+@media (max-width: 768px) {
+  ul {
+    display: none; /* hide menu */
+    flex-direction: column;
+    gap: 15px;
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    background: #eee;
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  ul.chalja {
+    display: flex; /* show when toggle class added */
+  }
+
+  button {
+    display: block; /* show hamburger */
+  }
+}
