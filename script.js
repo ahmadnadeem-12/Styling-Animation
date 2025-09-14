@@ -94,3 +94,25 @@ window.addEventListener("scroll", () => {
   }
   lastScrollY = window.scrollY;
 });
+
+// 🎹 Keypress Shortcuts
+document.addEventListener("keydown", function(event) {
+  if (event.key === "n") {
+    // Toggle navbar show/hide with "n"
+    if (navbar.style.top === "0px" || navbar.style.top === "") {
+      navbar.style.top = "-70px";
+    } else {
+      navbar.style.top = "0px";
+    }
+  }
+
+  if (event.key === "h") {
+    // Jump to Home
+    document.getElementById("home").scrollIntoView({ behavior: "smooth" });
+  }
+
+  if (event.key === "c") {
+    // Jump to Contact
+    document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+  }
+});
