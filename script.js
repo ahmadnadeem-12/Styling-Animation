@@ -86,11 +86,9 @@ window.addEventListener("scroll", () => {
 
   // Hide/show navbar
   if (window.scrollY > lastScrollY) {
-    // Scrolling down
-    navbar.style.top = "-70px"; // hide
+    navbar.style.top = "-70px"; 
   } else {
-    // Scrolling up
-    navbar.style.top = "0"; // show
+    navbar.style.top = "0"; 
   }
   lastScrollY = window.scrollY;
 });
@@ -98,7 +96,6 @@ window.addEventListener("scroll", () => {
 // 🎹 Keypress Shortcuts
 document.addEventListener("keydown", function(event) {
   if (event.key === "n") {
-    // Toggle navbar show/hide with "n"
     if (navbar.style.top === "0px" || navbar.style.top === "") {
       navbar.style.top = "-70px";
     } else {
@@ -107,12 +104,37 @@ document.addEventListener("keydown", function(event) {
   }
 
   if (event.key === "h") {
-    // Jump to Home
     document.getElementById("home").scrollIntoView({ behavior: "smooth" });
   }
 
   if (event.key === "c") {
-    // Jump to Contact
     document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
   }
 });
+
+// 🔑 Admin Role Play
+const loginBtn = document.getElementById("loginBtn");
+const adminPanel = document.getElementById("adminPanel");
+const output = document.getElementById("output");
+
+loginBtn.addEventListener("click", () => {
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
+
+  if (username === "admin" && password === "1234") {
+    alert("Login Successful!");
+    adminPanel.style.display = "block";
+  } else {
+    alert("Invalid credentials! Only admin can login.");
+  }
+});
+
+function addUser() {
+  output.innerText = "✅ New user added successfully!";
+}
+function deleteUser() {
+  output.innerText = "❌ User deleted successfully!";
+}
+function viewReports() {
+  output.innerText = "📊 Viewing all system reports...";
+}
