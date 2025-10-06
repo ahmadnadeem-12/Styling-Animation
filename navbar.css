@@ -24,13 +24,12 @@ button {
   border: none;
   font-size: 24px;
   cursor: pointer;
-  display: none; /* default hidden */
+  display: none; 
 }
 
-/* Small screen styles */
 @media (max-width: 768px) {
   ul {
-    display: none; /* hide menu */
+    display: none; 
     flex-direction: column;
     gap: 15px;
     position: absolute;
@@ -42,10 +41,11 @@ button {
   }
 
   ul.chalja {
-    display: flex; /* show when toggle class added */
+    display: flex; 
   }
 
   button {
-    display: block; /* show hamburger */
+    display: block; 
   }
 }
+
