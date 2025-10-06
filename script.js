@@ -60,7 +60,6 @@ counters.forEach(counter => {
   observer.observe(counter);
 });
 
-// Navbar active link on scroll + hide/show
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".nav-link");
 const navbar = document.getElementById("navbar");
@@ -93,7 +92,6 @@ window.addEventListener("scroll", () => {
   lastScrollY = window.scrollY;
 });
 
-// 🎹 Keypress Shortcuts
 document.addEventListener("keydown", function(event) {
   if (event.key === "n") {
     if (navbar.style.top === "0px" || navbar.style.top === "") {
@@ -112,7 +110,6 @@ document.addEventListener("keydown", function(event) {
   }
 });
 
-// 🔑 Admin Role Play
 const loginBtn = document.getElementById("loginBtn");
 const adminPanel = document.getElementById("adminPanel");
 const output = document.getElementById("output");
@@ -138,3 +135,4 @@ function deleteUser() {
 function viewReports() {
   output.innerText = "📊 Viewing all system reports...";
 }
+
